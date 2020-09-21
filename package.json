@@ -11,6 +11,9 @@
     "lsp",
     "language-client"
   ],
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
