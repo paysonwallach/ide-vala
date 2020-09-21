@@ -1,18 +1,30 @@
 {
   "name": "ide-vala",
-  "main": "./lib/main",
   "version": "0.2.0",
+  "main": "lib/main",
   "description": "Vala language support for Atom-IDE",
-  "repository": "https://github.com/naaando/ide-vala",
-  "license": "GPL",
   "keywords": [
     "atom-ide",
     "vala",
     "lsp",
     "language-client"
   ],
+  "repository": "https://github.com/paysonwallach/atom-ide-vala",
+  "license": "GPL-3.0",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "release": "standard-version"
+  },
+  "activationHooks": [
+    "source.vala:root-scope-used",
+    "source.vapi:root-scope-used"
+  ],
+  "engines": {
+    "atom": ">=1.21.0"
+  },
+  "dependencies": {
+    "atom-languageclient": "0.8.1",
+    "atom-package-deps": "^4.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -31,7 +43,8 @@
     }
   },
   "enhancedScopes": [
-    "source.vala"
+    "source.vala",
+    "source.vapi"
   ],
   "configSchema": {
     "vlsPath": {
@@ -40,17 +53,6 @@
       "default": "vala-language-server",
       "description": "Use custom Vala language server path"
     }
-  },
-  "engines": {
-    "atom": ">=1.21.0"
-  },
-  "package-deps": [
-    "language-vala-modern",
-    "atom-ide-ui"
-  ],
-  "dependencies": {
-    "atom-languageclient": "0.8.1",
-    "atom-package-deps": "^4.6.0"
   },
   "consumedServices": {
     "datatip": {
