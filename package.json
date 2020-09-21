@@ -53,9 +53,19 @@
     "atom-package-deps": "^4.6.0"
   },
   "consumedServices": {
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatip"
+      }
+    },
     "linter-indie": {
       "versions": {
         "2.0.0": "consumeLinterV2"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "consumeSignatureHelp"
       }
     }
   },
@@ -63,6 +73,21 @@
     "autocomplete.provider": {
       "versions": {
         "2.0.0": "provideAutocomplete"
+      }
+    },
+    "definitions": {
+      "versions": {
+        "0.1.0": "provideDefinitions"
+      }
+    },
+    "find-references": {
+      "versions": {
+        "0.1.0": "provideFindReferences"
+      }
+    },
+    "outline-view": {
+      "versions": {
+        "0.1.0": "provideOutlines"
       }
     }
   }
