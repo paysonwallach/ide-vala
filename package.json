@@ -11,6 +11,22 @@
     "lsp",
     "language-client"
   ],
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "standard-version": "^9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "npm run format",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "enhancedScopes": [
     "source.vala"
   ],
