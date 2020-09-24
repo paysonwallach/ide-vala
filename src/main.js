@@ -3,6 +3,11 @@ const {spawn} = require("child_process");
 const {AutoLanguageClient} = require("atom-languageclient");
 
 class ValaLanguageClient extends AutoLanguageClient {
+  constructor() {
+    // atom.config.set("core.debugLSP", true);
+    super();
+  }
+
   getGrammarScopes() {
     return ["source.vala"];
   }
@@ -16,7 +21,12 @@ class ValaLanguageClient extends AutoLanguageClient {
   }
 
   startServerProcess() {
-    const vls = spawn(atom.config.get("ide-vala.vlsPath"));
+    const vls = spawn(atom.config.get("ide-vala.vlsPath"), {
+      env: {
+        // G_MESSAGES_DEBUG: "all",
+        PATH: process.env.PATH
+      }
+    });
 
     vls.on("error", err =>
       atom.notifications.addError("Unable to start the Vala language server.", {
