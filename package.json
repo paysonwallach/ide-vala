@@ -64,11 +64,6 @@
       "versions": {
         "2.0.0": "consumeLinterV2"
       }
-    },
-    "signature-help": {
-      "versions": {
-        "0.1.0": "consumeSignatureHelp"
-      }
     }
   },
   "providedServices": {
@@ -85,6 +80,11 @@
     "find-references": {
       "versions": {
         "0.1.0": "provideFindReferences"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "provideSignatureHelp"
       }
     },
     "outline-view": {
