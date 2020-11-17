@@ -72,6 +72,11 @@
         "2.0.0": "provideAutocomplete"
       }
     },
+    "code-highlight": {
+      "versions": {
+        "0.1.0": "provideCodeHighlight"
+      }
+    },
     "definitions": {
       "versions": {
         "0.1.0": "provideDefinitions"
